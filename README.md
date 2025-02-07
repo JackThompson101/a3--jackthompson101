@@ -15,7 +15,7 @@ Your application is required to implement the following functionalities:
 - a `Server`, created using Express (no alternatives will be accepted for this assignment)
 - a `Results` functionality which shows all data, except passwords, associated with a logged-in user
 - a `Form/Entry` functionality which allows users to add, modify, and delete data items (must be all three!) associated with their username / account. 
-  The authentication is to be implemented using [Passport - Local Strategy](https://www.passportjs.org/packages/passport-local/) 
+  The authentication is to be implemented using the browser window's [localStorage](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
   which authenticates using a simple username and password. For the purposes of this assignment, you do not have to encrypt
   the password.
 - Persistent data storage in between server sessions using [MongoDB](https://www.MongoDB.com/cloud/atlas) (you *must* use MongoDB for this assignment). You can use either the [official MongoDB node.js library](https://www.npmjs.com/package/MongoDB) or use the [Mongoose library](https://www.npmjs.com/package/mongoose), which enables you to define formal schemas for your database. Please be aware that the course staff cannot provide in-depth support for use of Mongoose.  
@@ -61,7 +61,7 @@ Do the following to complete this assignment:
 2. Implement your project with the above requirements. Consider beginning by converting your A2 
    assignment. First, change the server to use express. Then, modify the server to use MongoDB 
    instead of storing data locally. Last but not least, implement user accounts and login using
-   Passport Local Strategy. User accounts and login is a difficult part of this assignment, so
+   the browser window's localStorage. User accounts and login is a difficult part of this assignment, so
    budget your time accordingly. 
 3. Ensure that your project has the proper naming scheme as previous assignments except starting
    with "a3-" so we can find it. 
@@ -86,7 +86,7 @@ ALL ACHIEVEMENTS MUST BE DESCRIBED IN YOUR README IN ORDER TO GET CREDIT FOR THE
 
 *Technical*
 - (10 points) Implement GitHub authentication using either  [Passport GitHub1](https://www.passportjs.org/packages/passport-github)
-  or [Passport GitHub2](https://www.passportjs.org/packages/passport-github2). 
+  or [Passport GitHub2](https://www.passportjs.org/packages/passport-github2), or [Passport - Local Strategy](https://www.passportjs.org/packages/passport-local/).
   *You must either use GitHub authentication or provide a username/password to access a dummy account*. 
   Course staff cannot be expected, for example, to have a personal Facebook, Google, or Twitter account to use when grading this assignment. 
   Please contact the course staff if you have any questions about this. THIS IS THE HARDEST ACHIEVEMENT OFFERED IN WEBWARE.
