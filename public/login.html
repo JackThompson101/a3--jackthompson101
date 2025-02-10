@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/material-tailwind@latest/dist/material-tailwind.min.js"></script>
+    <style>
+      body,
+      h2,
+      input,
+      button,
+      form {
+        font-family: 'Archivo Black', Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col items-center justify-center text-center bg-[#222] text-white m-0 p-5 min-h-screen">
+    <div
+      class="bg-[#333] p-5 border border-[#ff0000] rounded shadow-[0_4px_8px_rgba(255,0,0,0.3)] max-w-[400px] w-full mx-auto"
+    >
+      <h2 class="mb-4 text-2xl">Login</h2>
+      <form onsubmit="handleLogin(event)" class="flex flex-col gap-3">
+        <input
+          id="username"
+          placeholder="Username"
+          required
+          class="p-2 border border-[#ff0000] rounded bg-[#222] text-white text-center focus:outline-none"
+        />
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          required
+          class="p-2 border border-[#ff0000] rounded bg-[#222] text-white text-center focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="py-2 px-3 rounded font-bold transition duration-300 bg-[#ff0000] text-black hover:bg-[#cc0000] hover:scale-105"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

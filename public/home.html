@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <head>
+    <meta charset="utf-8">
+    <title>1 Rep Max Tracker</title>
+    <script src="js/main.js" defer></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <link rel="stylesheet" href="https://unpkg.com/material-tailwind@latest/dist/material-tailwind.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+      body, * {
+        font-family: 'Archivo Black', Arial, sans-serif;
+      }
+    </style>
+  </head>
+    <body class="flex flex-col items-center justify-center text-center bg-[#222] text-white m-0 p-5 min-h-screen">
+    <img src="https://pngimg.com/uploads/barbell/barbell_PNG16360.png" class="w-20" alt="Barbell Image">
+    <header>
+      <h1 id="header"
+          class="text-[#ff0000] mb-2 font-bold"
+          style="text-shadow: 2px 2px 4px black;">
+        1 Rep Max Tracker
+      </h1>
+      <h2 class="mb-4">
+        Welcome, <span id="user-name" class="">Loading...</span>!
+      </h2>
+    </header>
+
+    <div id="user-profile" class="mb-4">
+      <p id="user-email" class="m-0 p-0 leading-[1.2]"></p>
+      <p id="user-bodyweight" class="m-0 p-0 leading-[1.2]"></p>
+      <p id="user-username" class="m-0 p-0 leading-[1.2]"></p>
+    </div>
+
+    <p class="mb-4">
+      Enter a new exercise or modify the reps/weight of another one.<br>
+      Then we can project your 1 rep max using Epley's formula.<br><br>
+    </p>
+
+
+    <div class="flex flex-col justify-center items-center w-full">
+      <table id="dataTable"
+             class="w-[60%] border-collapse bg-[#222] shadow-[0_4px_8px_rgba(255,0,0,0.3)] text-white">
+        <thead>
+          <tr>
+            <th class="border border-[#ff0000] p-2 text-center bg-[#ff0000] text-black font-bold">
+              Exercise
+            </th>
+            <th class="border border-[#ff0000] p-2 text-center bg-[#ff0000] text-black font-bold">
+              Reps
+            </th>
+            <th class="border border-[#ff0000] p-2 text-center bg-[#ff0000] text-black font-bold">
+              Weight
+            </th>
+            <th class="border border-[#ff0000] p-2 text-center bg-[#ff0000] text-black font-bold">
+              Projected 1 RPM
+            </th>
+            <th class="border border-[#ff0000] p-2 text-center bg-[#ff0000] text-black font-bold"></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <form id="dataForm" class="flex flex-row justify-center items-center gap-2 mb-5 w-[60%]">
+        <input type="text" id="exercise" placeholder="Exercise"
+               class="w-[90%] p-1 border border-[#ff0000] rounded bg-[#333] text-white text-center placeholder-white/60 focus:outline-none">
+        <input type="text" id="reps" placeholder="Reps"
+               class="w-[90%] p-1 border border-[#ff0000] rounded bg-[#333] text-white text-center placeholder-white/60 focus:outline-none">
+        <input type="text" id="weight" placeholder="Weight"
+               class="w-[90%] p-1 border border-[#ff0000] rounded bg-[#333] text-white text-center placeholder-white/60 focus:outline-none">
+        <button type="submit" id="submit-button"
+                class="px-3 py-2 rounded font-bold transition duration-300 bg-[#ff0000] text-black cursor-pointer hover:bg-[#cc0000] hover:scale-105">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
